@@ -1,4 +1,5 @@
 🍲 Recipe Manager – Group G
+
 A Python console application for managing recipes, scaling portions, generating shopping lists, tracking pantry inventory, and viewing nutritional information.
 
 📑 Table of Contents
@@ -23,9 +24,11 @@ Unit & Scaling Rules
 Responsibilities
 
 🧩 Project Overview
+
 The Recipe Manager is a Python console application designed to help users store recipes, scale portions, create shopping lists, manage pantry inventory, and access nutritional and dietary information.
 
 🎯 Problem & Motivation
+
 Home cooks often struggle with:
 
 scattered recipe notes
@@ -41,11 +44,13 @@ missing calorie or dietary information
 The Recipe Manager solves these issues through a unified, easy‑to‑use console interface.
 
 👥 User Role
+
 User  
 The only role in the system.
 Users can manage recipes, shopping lists, pantry items, and view nutritional information.
 
 💻 Console Interaction
+
 The application is menu‑driven:
 
 View recipes
@@ -67,6 +72,7 @@ Save / Load data
 Exit
 
 🧰 Features
+
 Add, view, search, and scale recipes
 
 Create shopping lists for multiple recipes
@@ -88,6 +94,7 @@ Determine vegetarian/vegan status
 Save and load all data from file
 
 📚 User Stories
+
 US1 – Add Recipe
 As a user, I want to add a recipe with ingredients, quantities, and yield in portions
 so that I can save it and scale it later.
@@ -145,6 +152,7 @@ As a user, I want to see which recipes I can cook entirely from my pantry
 so that I can start cooking without shopping.
 
 ✔️ Acceptance Criteria
+
 US1 – Add Recipe
 Given I am in the recipe menu
 
@@ -230,6 +238,7 @@ Recipe shown only if all ingredients exist in sufficient quantity
 Missing ingredients → recipe excluded
 
 🍏 Ingredient Dataset
+
 Ingredient	kcal/100g	Vegan	Vegetarian
 Sugar	400	Yes	Yes
 Milk	60	No	Yes
@@ -239,6 +248,7 @@ Tomato	18	Yes	Yes
 
 
 📐 Unit & Scaling Rules
+
 Units are not automatically converted (e.g., g ↔ kg).
 
 Ingredients must share the same unit to be combined.
@@ -247,7 +257,9 @@ Scaling formula:
 
 Code
 new_quantity = old_quantity * (new_portions / old_portions)
+
 🧑‍🏫 Responsibilities
+
 (Three substantive stories per student. US10 and menu navigation do not count.)
 
 Code
