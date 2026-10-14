@@ -1,6 +1,5 @@
 🍲 Recipe Manager – Group G
 
-A Python console application for managing recipes, scaling portions, generating shopping lists, tracking pantry inventory, and viewing nutritional information.
 
 📑 Table of Contents
 Project Overview
@@ -135,27 +134,27 @@ US7 – Exclude Pantry Items from Shopping List
 As a user, i want the option to discount the pantry from my shopping list so that I don’t buy too much or duplicates.
 
 Acceptance Criteria:  
-Pantry quantities are deducted from the shopping list, items fully covered by pantry stock are removed, and partial quantities are adjusted correctly.
+Pantry quantities can be deducted from the shopping list, items fully covered by pantry stock are removed, and partial quantities are adjusted correctly.
 
-US8 – Combine Ingredients
+US8 – Combine Recipes
 As a user, I want ingredients that appear in multiple recipes to be combined so that my shopping list does not contain duplicates.
 
 Acceptance Criteria:  
-Identical ingredients are merged and only combined if they share the same unit.
+Identical ingredients are merged in the list with the units.
 
 US9 – Edit Shopping List
-As a user, I want to add or remove items from my shopping list so that I can adjust it to my needs.
+As a user, I want to add, remove or update the items from my shopping list so that I can adjust it to my needs.
 
 Acceptance Criteria:  
-Items can be added or removed, and invalid inputs result in an error message.
+Items can be added, removed or updated, and invalid inputs result in an error message.
 
 US10 – View Calories
 As a user, I want to see how many calories are in a dish so that I know how much I am consuming.
 
 Acceptance Criteria:  
-Calories are calculated using a predefined ingredient dataset, and if calorie information is missing for an ingredient, the user receives a warning.
+Calories are calculated using a predefined ingredient dataset.
 
-US11 – Save and Load Data
+No Chose here US11 – Save and Load Data
 As a user, I want my recipes and shopping lists to be saved and loaded from a file so that my data is still available when I restart the application.
 
 Acceptance Criteria:  
