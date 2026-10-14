@@ -93,149 +93,91 @@ Determine vegetarian/vegan status
 
 Save and load all data from file
 
-📚 User Stories
+📚 User Stories & Acceptance Criteria
 
 US1 – Add Recipe
-As a user, I want to add a recipe with ingredients, quantities, and yield in portions
-so that I can save it and scale it later.
+As a user, I want to add a recipe with its ingredients, quantities, and portion yield so that I can save it and scale it later.
+
+Acceptance Criteria:  
+The user can enter a recipe name, ingredients, quantities, and portion yield, and the recipe is saved and appears in the recipe list. Invalid inputs such as empty names or negative quantities must trigger an error message.
 
 US2 – View Recipes
-As a user, I want to view my saved recipes
-so that I know which recipes are available.
+As a user, I want to view my saved recipes so that I know which recipes are available.
+
+Acceptance Criteria:  
+All saved recipes are displayed, and if no recipes exist, the user receives a message indicating that the list is empty.
 
 US3 – Search Recipes
-As a user, I want to search for recipes by name
-so that I can quickly find the one I need.
+As a user, I want to search for a recipe by name so that I can quickly find the one I am looking for.
+
+Acceptance Criteria:  
+Partial matches are shown, the search is case‑insensitive, and if no recipe matches the search term, the user receives a message.
 
 US4 – View Recipe Details
-As a user, I want to see the ingredients, quantities, and portion yield of a recipe
-so that I know what is required to prepare it.
+As a user, I want to view the ingredients, quantities, and portion yield of a recipe so that I know what I need to prepare it.
+
+Acceptance Criteria:  
+All recipe details are displayed correctly, and if the user enters an invalid recipe name, an error message is shown.
 
 US5 – Scale Recipe
-As a user, I want to specify how many portions I want to cook
-so that ingredient quantities adjust automatically.
+As a user, I want to specify how many portions I want to cook so that the ingredient quantities adjust automatically.
+
+Acceptance Criteria:  
+Quantities scale proportionally based on the new portion amount, rounding rules are applied consistently, and invalid portion inputs trigger an error message.
 
 US6 – Create Shopping List
-As a user, I want to create a shopping list for one or multiple recipes
-so that I know which ingredients I need to buy.
+As a user, I want to create a shopping list for one or multiple recipes so that I know which ingredients I need to buy.
+
+Acceptance Criteria:  
+Ingredients from selected recipes are collected, quantities are summed correctly, and the shopping list is saved.
 
 US7 – Combine Ingredients
-As a user, I want ingredients that appear in multiple recipes to be combined
-so that my shopping list does not contain duplicates.
+As a user, I want ingredients that appear in multiple recipes to be combined so that my shopping list does not contain duplicates.
+
+Acceptance Criteria:  
+Identical ingredients are merged and only combined if they share the same unit.
 
 US8 – Edit Shopping List
-As a user, I want to add or remove items from my shopping list
-so that I can adjust it to my needs.
+As a user, I want to add or remove items from my shopping list so that I can adjust it to my needs.
+
+Acceptance Criteria:  
+Items can be added or removed, and invalid inputs result in an error message.
 
 US9 – View Calories
-As a user, I want to see how many calories a dish contains
-so that I know how much I am consuming.
+As a user, I want to see how many calories are in a dish so that I know how much I am consuming.
 
-US10 – Save & Load Data
-As a user, I want my recipes and shopping lists to be saved and loaded from a file
-so that my data persists after restarting the application.
+Acceptance Criteria:  
+Calories are calculated using a predefined ingredient dataset, and if calorie information is missing for an ingredient, the user receives a warning.
 
-US11 – Vegetarian/Vegan Classification
-As a user, I want to know if a recipe is vegetarian or vegan
-so that I can choose recipes that fit my dietary needs.
+US10 – Save and Load Data
+As a user, I want my recipes and shopping lists to be saved and loaded from a file so that my data is still available when I restart the application.
 
-US12 – Manage Pantry
-As a user, I want to add and remove items from my pantry
-so that I can track what I already have at home.
+Acceptance Criteria:  
+All data is saved correctly, loading restores the data fully, and corrupted files trigger an error message.
 
-US13 – Exclude Pantry Items from Shopping List
-As a user, I don’t want items I already have in my pantry to appear on my shopping list
-so that I don’t buy duplicates.
+US11 – Determine if a Recipe Is Vegetarian or Vegan
+As a user, I want to know if a recipe is vegetarian, vegan, or not so that I can pick the right recipe according to my dietary needs.
 
-US14 – Cookable Recipes from Pantry
-As a user, I want to see which recipes I can cook entirely from my pantry
-so that I can start cooking without shopping.
-
-✔️ Acceptance Criteria
-
-US1 – Add Recipe
-Given I am in the recipe menu
-
-When I enter a name, ingredients, quantities, and portion yield
-
-Then the recipe is saved and appears in the recipe list
-
-Invalid inputs (empty name, negative quantities) trigger an error message
-
-US2 – View Recipes
-All recipes are displayed
-
-Empty list → message shown
-
-US3 – Search Recipes
-Partial matches are shown
-
-Search is case‑insensitive
-
-No matches → message shown
-
-US4 – View Recipe Details
-All details are displayed correctly
-
-Invalid recipe name → error message
-
-US5 – Scale Recipe
-Quantities scale proportionally
-
-Rounding rules defined in README
-
-Invalid portion input → error message
-
-US6 – Create Shopping List
-Ingredients from selected recipes are collected
-
-Quantities are summed correctly
-
-List is saved
-
-US7 – Combine Ingredients
-Identical ingredients are merged
-
-Units must match
-
-US8 – Edit Shopping List
-Items can be added or removed
-
-Invalid inputs → error message
-
-US9 – View Calories
-Calories calculated using predefined dataset
-
-Missing calorie data → warning message
-
-US10 – Save & Load Data
-Data saved to file
-
-Loading restores all data
-
-Corrupted file → error message
-
-US11 – Vegetarian/Vegan Classification
-Classification uses predefined dataset
-
-Unknown ingredients → warning message
+Acceptance Criteria:  
+The classification is based on a predefined ingredient dataset, and unknown ingredients trigger a warning.
 
 US12 – Manage Pantry
-Quantities stored correctly
+As a user, I want to be able to add and remove items from my pantry so that I can see what I have at home.
 
-Removing more than available → error message
+Acceptance Criteria:  
+Quantities are stored correctly, and removing more than what is available triggers an error message.
 
 US13 – Exclude Pantry Items from Shopping List
-Pantry quantities deducted
+As a user, I don’t want items from recipes to appear on my shopping list if I already have them so that I don’t buy too much or duplicates.
 
-Fully covered items removed
+Acceptance Criteria:  
+Pantry quantities are deducted from the shopping list, items fully covered by pantry stock are removed, and partial quantities are adjusted correctly.
 
-Partial quantities adjusted
+US14 – Cook Recipes Without Shopping
+As a user, I want to be able to cook a recipe without going shopping so that I can start cooking straight away.
 
-US14 – Cookable Recipes from Pantry
-Recipe shown only if all ingredients exist in sufficient quantity
-
-Missing ingredients → recipe excluded
+Acceptance Criteria:  
+Recipes are shown only if all required ingredients exist in sufficient quantity in the pantry, and recipes missing ingredients are excluded.
 
 🍏 Ingredient Dataset
 
