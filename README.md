@@ -240,10 +240,15 @@ Missing ingredients → recipe excluded
 🍏 Ingredient Dataset
 
 Ingredient	kcal/100g	Vegan	Vegetarian
+
 Sugar	400	Yes	Yes
+
 Milk	60	No	Yes
+
 Egg	155	No	Yes
+
 Butter	720	No	Yes
+
 Tomato	18	Yes	Yes
 
 
