@@ -1,7 +1,7 @@
-
-#this fucntion will combine the ingredients from a list of chosen recipes
+#USER STORY 8: Combine identical ingredients that have the same unit
+#this fucntion will combine the ingredients from a list
 #ingredient_list is a list of dictionaries
-def combine_recipes(ingredient_list):
+def combine_ingredients(ingredient_list):
     combined_list = []
     #combined_list = empty list to hold results
 
@@ -16,8 +16,11 @@ def combine_recipes(ingredient_list):
         if existing_item["name"] == item["name"] and existing_item["unit"] == item["unit"]:
             existing_item["quantity"] = existing_item["quantity"] + item["quantity"]
             found = True
-# if found is still false, the ingredient is added to the list "not found = False"
+# if found is still false, the ingredient is added to the list "not found = False" - if it was true it would mean that the ingredieent was found in our list
         if not found:
+# new entry - "Alias versus Copy", new entry adds a new dictionary in a new place and appends it to the combined list, 
+# instead of appending directly which would also overwrite the the amunts in the original recipe
+# alias happens when two different variable names (or two different lists) point to the exact same object in your computer's memory
                     new_entry = {
                         "name": item["name"],
                         "quantity": item["quantity"],
