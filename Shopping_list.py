@@ -17,3 +17,27 @@ def create_shopping_list(selected_recipes):
     shopping_list = combine_ingredients(all_ingredients)
     return shopping_list
 #returns a shopping list with all ingredients from the recipes combined
+
+# USER STORY 9: Add an item to the shopping list
+def add_shopping_list_item(shopping_list, name, quantity, unit):
+#parameter 1 - name of the list, then the name, quantitiy, unit - this tell python which list to work in
+    if quantity <= 0:
+        return False
+# shopping list item must have a quantity to be valid
+# units and names anything is allowed as this is for adding to the shopping list you would take with you such as soap or bin bags
+    new_item = {
+        "name": name,
+        "quantity": quantity,
+        "unit": unit
+    }
+# new item is a dictionary of the parameters, ready to be added to the shopping list
+    shopping_list.append(new_item)
+#combine ingredients in case user added an item already on the list
+    merged_list = combine_ingredients(shopping_list)
+#clear the shoppping list, and then rewite every item in the shoping list
+# to ensure the program is refrencing the updated list
+    shopping_list.clear()
+    for item in merged_list:
+        shopping_list.append(item)
+    return True
+# gives the value True to the fact that the item has been added to the shopping list

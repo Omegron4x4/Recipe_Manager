@@ -1,1 +1,43 @@
-
+from ingredients.py
+#1
+def combine_ingredients(ingredient_list):
+    combined_list = []
+    for item in ingredient_list
+        found = False
+        for exsting_item in combined_list
+        if existing_item["name"] == item["name"] and existing_item["unit"] == item["unit"]:
+            existing_item["quantity"] = existing_item["quantity"] + item["quantity"]
+            found = True
+        if not found:
+                    new_entry = {
+                        "name": item["name"],
+                        "quantity": item["quantity"],
+                        "unit": item["unit"]
+                    }
+                    combined_list.append(new_entry)
+            return combined_list
+    
+from shopping_list.py
+#1
+def create_shopping_list(selected_recipes):
+    all_ingredients = []
+    for recipe in selected_recipes:
+        for item in recipe["ingredients"]:
+            all_ingredients.append(item)
+    shopping_list = combine_ingredients(all_ingredients)
+    return shopping_list
+#2
+def add_shopping_list_item(shopping_list, name, quantity, unit):
+    if quantity <= 0:
+        return False
+    new_item = {
+        "name": name,
+        "quantity": quantity,
+        "unit": unit
+    }
+    shopping_list.append(new_item)
+    merged_list = combine_ingredients(shopping_list)
+    shopping_list.clear()
+    for item in merged_list:
+        shopping_list.append(item)
+    return True
