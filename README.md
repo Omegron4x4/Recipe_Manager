@@ -154,7 +154,7 @@ As a user, I want the option to deduct pantry quantities from my shopping list s
 - Items fully covered by pantry stock are removed from the shopping list.
 - Items partially covered by pantry stock have their quantities adjusted correctly.
 
-### US8 — Combine Recipes
+### US8 — Combine Ingredients
 
 **Responsible:** Niels
 
