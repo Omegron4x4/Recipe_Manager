@@ -177,7 +177,7 @@ As a user, I want to add, remove, or update shopping list items so that I can ad
 
 - Items can be added, removed, or updated.
 - Invalid inputs trigger an error message.
-- Each list must have one Unique Name for Order
+- Each list must have one unique name for order
 
 ### US10 — View Calories
 
