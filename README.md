@@ -166,12 +166,12 @@ As a user, I want ingredients that appear in multiple recipes to be combined so 
 - Identical ingredients with the same unit are merged.
 - Their quantities are summed correctly.
 
-### US9 — Edit Shopping List
+### US9 — Edit Shopping List for Recipes
 
 **Responsible:** Niels
 
 **User story:**  
-As a user, I want to add, remove, or update shopping list items so that I can adjust the list to my needs.
+As a user, I want to add, remove, or update shopping list items so that I can adjust the Recipe-list to my needs.
 
 **Acceptance criteria:**
 
