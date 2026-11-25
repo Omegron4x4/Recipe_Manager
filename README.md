@@ -153,8 +153,9 @@ As a user, I want the option to deduct pantry quantities from my shopping list s
 - Pantry quantities can be deducted from the shopping list.
 - Items fully covered by pantry stock are removed from the shopping list.
 - Items partially covered by pantry stock have their quantities adjusted correctly.
+- Items whose stock reaches zero are removed from the pantry.
 
-### US8 — Combine Recipes
+### US8 — Combine Ingredients
 
 **Responsible:** Niels
 
@@ -166,17 +167,18 @@ As a user, I want ingredients that appear in multiple recipes to be combined so 
 - Identical ingredients with the same unit are merged.
 - Their quantities are summed correctly.
 
-### US9 — Edit Shopping List
+### US9 — Edit Shopping List for Recipes
 
 **Responsible:** Niels
 
 **User story:**  
-As a user, I want to add, remove, or update shopping list items so that I can adjust the list to my needs.
+As a user, I want to add, remove, or update shopping list items so that I can adjust the Recipe-list to my needs.
 
 **Acceptance criteria:**
 
 - Items can be added, removed, or updated.
 - Invalid inputs trigger an error message.
+- Each list must have one unique name for order
 
 ### US10 — View Calories
 
