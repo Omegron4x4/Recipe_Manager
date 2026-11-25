@@ -102,21 +102,21 @@ As a user, I want to view a recipe's ingredients, quantities, units, portion yie
 
 **Acceptance criteria:**
 
-- All recipe details are displayed correctly.
-- The user is informed of any recipe ingredients already available in the pantry.
+- Given a valid recipe selection, when details are viewed, the output shows the recipe name, portion yield, and each ingredient with its required quantity and unit.
+- Comparing each ingredient (matching name and unit) against pantry stock clearly marks items as "Available" (pantry ≥ required), "Partially available" (0 < pantry < required, showing available quantity), or "Missing", and handles invalid selections or empty lists without a traceback.
 
 ### US5 — Scale Recipe
 
 **Responsible:** Sebastian
 
 **User story:**  
-As a user, I want to specify how many portions I want to cook so that ingredient quantities adjust automatically.
+As a user, I want to enter a target number of portions so that all ingredient quantities scale proportionally according to a consistent rounding rule.
 
 **Acceptance criteria:**
 
-- Quantities scale proportionally based on the requested number of portions.
-- Rounding rules are applied consistently.
-- Invalid portion inputs trigger an error message.
+- Using new_quantity = old_quantity * (new_portions / old_portions) without automatic unit conversion (e.g., 2 portions with 150 g Sugar scaled to 5 portions gives 375.00 g Sugar).
+- All scaled quantities are rounded consistently to 2 decimal places ( round(value, 2) ) without mutating the saved recipe unless explicitly saved.
+- Given 0, a negative number (-2), a decimal (1.5), or non-numeric text ("abc"), an error message is shown and the user is re-prompted without a traceback.
 
 ### US6 — Create Shopping List
 
@@ -199,12 +199,13 @@ As a user, I want my recipes, shopping lists, and pantry inventory to be saved t
 **Responsible:** Sebastian
 
 **User story:**  
-As a user, I want to know whether a recipe is vegetarian, vegan, or neither so that I can choose recipes according to my dietary needs.
+As a user, I want to see whether a recipe is Vegan, Vegetarian, or Neither based on the predefined ingredient dataset, so that I can filter dishes according to dietary restrictions..
 
 **Acceptance criteria:**
 
-- The classification is based on the predefined ingredient dataset.
-- Unknown ingredients trigger a warning.
+- All Vegan = Yes → "Vegan"; all Vegetarian = Yes with at least one "Vegetarian (not vegan)"; any known Vegan = No → Vegetarian = No → "Neither vegetarian nor vegan".
+- Any ingredient missing from the dataset prints a warning ( Warning: Unknown ingredient '<name>' ) and marks the status as "Unknown / Incomplete" without crashing.
+
 
 ### US13 — Manage Pantry
 
