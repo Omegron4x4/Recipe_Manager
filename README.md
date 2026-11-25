@@ -127,9 +127,9 @@ As a user, I want to create a shopping list for one or multiple recipes so that 
 
 **Acceptance criteria:**
 
-- Ingredients from the selected recipes are collected.
-- Quantities are summed correctly.
-- The shopping list is saved.
+- Given one or more valid recipe selections, all ingredients from those recipes are collected into the list.
+- Ingredient quantities across selected recipes are accumulated accurately.
+- Given a unique, non-empty list name, the shopping list is stored in application state; duplicate names trigger an error message.
 
 ### US7 — Exclude Pantry Items from Shopping List
 
@@ -150,11 +150,11 @@ As a user, I want the option to deduct pantry quantities from my shopping list s
 **Responsible:** Niels
 
 **User story:**  
-As a user, I want ingredients that appear in multiple recipes to be combined so that my shopping list does not contain duplicates.
+As a user, I want duplicate ingredients across multiple recipes to be merged automatically when they share the same unit, so that my shopping list stays concise.
 
 **Acceptance criteria:**
 
-- Identical ingredients with the same unit are merged.
+- Identical ingredients with the same unit are merged, given they have the same unit
 - Their quantities are summed correctly.
 
 ### US9 — Edit Shopping List for Recipes
@@ -162,13 +162,13 @@ As a user, I want ingredients that appear in multiple recipes to be combined so 
 **Responsible:** Niels
 
 **User story:**  
-As a user, I want to add, remove, or update shopping list items so that I can adjust the Recipe-list to my needs.
+As a user, I want to add, update, or remove items in a uniquely named shopping list, so that I can customize my shopping plan before buying.
 
 **Acceptance criteria:**
 
 - Items can be added, removed, or updated.
-- Invalid inputs trigger an error message.
-- Each list must have one unique name for order
+- Quantities ≤ 0, non-numeric values, or unknown item selections display an error message and leave the list unchanged.
+- Each shopping list must have a unique, non-empty name; duplicate names are rejected with an error message
 
 ### US10 — View Calories
 
