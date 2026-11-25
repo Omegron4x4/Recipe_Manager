@@ -13,6 +13,7 @@ A Python console application to store recipes, scale portions, create shopping l
 - [Ingredient Dataset](#ingredient-dataset)
 - [Unit and Scaling Rules](#unit-and-scaling-rules)
 - [Responsibilities](#responsibilities)
+- [Project Requirements Verification (Console Input, Data Validation, File Processing)](#Project-Requirements-Verification)
 
 ## Project Overview
 
@@ -20,15 +21,9 @@ The Recipe Manager is a menu-driven Python console application that helps users 
 
 ## Problem and Motivation
 
-Home cooks often struggle with:
+Problem: Home cooks frequently rely on scattered notes, miscalculate ingredient quantities when adjusting servings, buy duplicate items already stored at home, and lack clear visibility into meal calories or vegetarian/vegan suitability. 
 
-- Scattered recipe notes
-- Difficulty scaling portions
-- Duplicate ingredient purchases
-- Unclear pantry inventory
-- Missing calorie or dietary information
-
-The Recipe Manager addresses these problems through a unified, easy-to-use console interface.
+Scenario: Before cooking or grocery shopping, a user launches the console application, adds or searches recipes, scales portions to the desired yield, checks available pantry stock, generates a deduplicated shopping list, and saves all application data to disk for future sessions.
 
 ## User Role
 
