@@ -186,13 +186,13 @@ As a user, I want to see how many calories are in a dish so that I know how much
 **Responsible:** All team members — shared responsibility
 
 **User story:**  
-As a user, I want my recipes, shopping lists, and pantry inventory to be saved to and loaded from a file so that my data remains available when I restart the application.
+As a user, I want all recipes, shopping lists, and pantry inventory to be persisted to structured files and restored upon loading, so that no data is lost between sessions.
 
 **Acceptance criteria:**
 
-- All application data is saved correctly.
-- Loading restores the data fully.
-- Corrupted files trigger an error message.
+- Saving writes all recipes, shopping lists, and pantry items to disk and displays a confirmation message.
+- Loading a valid data file restores recipes, shopping lists, and pantry items completely.
+- Missing or corrupted/malformed files display a clear error message, keep existing inmemory data intact, and never raise a Python traceback.
 
 ### US12 — Determine Vegetarian or Vegan Status
 
