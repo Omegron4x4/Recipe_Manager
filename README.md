@@ -236,11 +236,11 @@ As a user, I want to find recipes I can cook using my pantry stock so that I can
 
 | Ingredient | kcal per 100 g | Vegan | Vegetarian |
 | --- | ---: | :---: | :---: |
-| Sugar (Default unit: g) | 400 | Yes | Yes |
-| Milk (Default unit: g) | 60 | No | Yes |
-| Egg (Default unit: g) | 155 | No | Yes |
-| Butter (Default unit: g) | 720 | No | Yes |
-| Tomato (Default unit: g) | 18 | Yes | Yes |
+| Sugar | 400 | Yes | Yes |
+| Milk | 60 | No | Yes |
+| Egg | 155 | No | Yes |
+| Butter | 720 | No | Yes |
+| Tomato | 18 | Yes | Yes |
 
 ## Unit and Scaling Rules
 
