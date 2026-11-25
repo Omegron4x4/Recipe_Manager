@@ -30,15 +30,16 @@ Scenario: Before cooking or grocery shopping, a user launches the console applic
 User Role: Home Cook (User) — Manages personal recipes, scales serving sizes, maintains pantry inventory, builds and edits shopping lists, and checks nutritional/dietary details.
 
 Console Interaction: Users interact via numbered menu options (1–9). Surrounding whitespace is trimmed and text commands are handled case-insensitively. Invalid menu entries display a clear warning message and re-prompt without terminating the program.
-1. View recipes
-2. Add recipe
-3. Search recipes
-4. View recipe details
-5. Scale recipe
-6. Create / edit shopping list
+1. Add recipe
+2. Search recipes
+3. View recipe details
+4. Scale recipe
+5. Create shopping list
+6. View / edit shopping lists
 7. Manage pantry
-8. Save / Load data
-9. Exit
+8. Find recipes I can cook
+9. Save / Load data
+0. Exit
 
 ## Features
 
