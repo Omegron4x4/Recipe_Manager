@@ -27,20 +27,15 @@ Scenario: Before cooking or grocery shopping, a user launches the console applic
 
 ## User Role
 
-The application has one role: **User**.
+User Role: Home Cook (User) — Manages personal recipes, scales serving sizes, maintains pantry inventory, builds and edits shopping lists, and checks nutritional/dietary details.
 
-Users can manage recipes, shopping lists, and pantry items, and view nutritional and dietary information.
-
-## Console Interaction
-
-The application provides the following menu options:
-
+Console Interaction: Users interact via numbered menu options (1–9). Surrounding whitespace is trimmed and text commands are handled case-insensitively. Invalid menu entries display a clear warning message and re-prompt without terminating the program.
 1. View recipes
 2. Add recipe
 3. Search recipes
 4. View recipe details
 5. Scale recipe
-6. Create shopping list
+6. Create / edit shopping list
 7. Manage pantry
 8. Save / Load data
 9. Exit
