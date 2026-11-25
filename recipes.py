@@ -1,9 +1,13 @@
 def add_recipe(recipes, name, portions, ingredient_list):
+  #Validate and add a new recipe dictionary to the recipe dictionary to the recipes list.#
   cleaned_name = name.strip()
   if cleaned_name == "":
     return None
   if portions <=0:
     return None
+  if len(ingredients_list) == 0:
+    return None
+    
   recipe = {"name": cleaned_name,"portions": portions,"ingredients": ingredient_list}
   recipes.append(recipe)
   return recipe
