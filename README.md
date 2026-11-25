@@ -59,33 +59,33 @@ Console Interaction: Users interact via numbered menu options (1–9). Surroundi
 **Responsible:** Karolina
 
 **User story:**  
-As a user, I want to add a recipe with its ingredients, quantities, and portion yield so that I can save it and scale it later.
+As a user, I want to add a recipe with its name, predefined ingredients, positive quantities, units and portion yield, so that I can store and reuse it later.
 
 **Acceptance criteria:**
 
-- The user can enter a recipe name, ingredients, quantities, and portion yield.
-- Ingredients must be chosen from the predefined ingredient list.
-- The recipe is saved and appears in the recipe list.
-- Invalid inputs, such as empty names or negative quantities, trigger an error message.
+- Given valid inputs (non-empty recipe name, integer portion yield ≥ 1, ingredients from the predefined dataset, and numeric quantity > 0), when saved, the recipe is added to the recipe collection.
+- Given an ingredient not in the predefined dataset, when entered, a warning message is displayed and the user is re-prompted without crashing.
+- After saving, the recipe is listed under "View recipes" with its name and portion yield.
+- Given an empty name, portion yield ≤ 0, non-integer yield, or quantity ≤ 0, an error message is shown and no invalid recipe is saved.
 
 ### US2 — View Recipes
 
 **Responsible:** Karolina
 
 **User story:**  
-As a user, I want to view my saved recipes so that I know which recipes are available.
+As a user, I want to view a numbered list of all saved recipes with their portion yields, so that I can see what recipes are available.
 
 **Acceptance criteria:**
 
-- All saved recipes are displayed.
-- If no recipes exist, the user receives a message indicating that the list is empty.
+- Given one or more saved recipes, when "View recipes" is selected, each recipe is shown on its own numbered line (starting at 1) with name and portion yield.
+- Given zero saved recipes, when "View recipes" is selected, an informative empty-list message is displayed without crashing.
 
 ### US3 — Search Recipes
 
 **Responsible:** Karolina
 
 **User story:**  
-As a user, I want to search for a recipe by name so that I can quickly find the one I am looking for.
+As a user, I want to search for saved recipes by full or partial name regardless of capitalization, so that I can quickly locate a specific dish.
 
 **Acceptance criteria:**
 
