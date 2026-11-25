@@ -3,8 +3,21 @@
 #needed for combining the ingredients in the shopping list to avoid duplicates
 from ingredients import combine_ingredients
 
+#determines if a shopping list name has been taken, prevents duplicate list names
+def is_shopping_list_name_taken(shopping_list, list_name):
+    cleaned_shopping_list = list_name.strip().lower()
+#change everything to lowercase, and strip spaces away
+    for existing_list in shopping_list
+        if existing_list["name"].strip().lower() == cleaned_target:
+            return True
+    return False
+
+#compares if any exsisting list has the name of the iput of list name
+
+
+
 #this function will wirte a shopping list from the seleted recipes
-def create_shopping_list(selected_recipes):
+def create_shopping_list(selected_recipes, list_name):
     all_ingredients = []
 #all_ingredients = empty list to hold results
 
