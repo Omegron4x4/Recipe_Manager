@@ -49,13 +49,13 @@ The application provides the following menu options:
 
 | Area | Features |
 | --- | --- |
-| Recipes | Add, view, search, and scale recipes |
-| Shopping lists | Create lists for multiple recipes, combine duplicate ingredients, and edit items |
-| Pantry | Track inventory and deduct pantry quantities from shopping lists |
-| Cooking | Find recipes that can be prepared using pantry stock |
-| Nutrition | Display calorie information |
-| Dietary information | Determine vegetarian and vegan status |
-| Data storage | Save and load all application data |
+| Recipes | Add recipes using predefined ingredients, list saved recipes, search case-insensitively, view details with pantry comparison, and scale portions proportionally. |
+| Shopping lists | Create uniquely named lists across multiple recipes, merge identical ingredients sharing the same unit, deduct pantry stock, and add/update/remove items. |
+| Pantry | Track home ingredient stock, add/remove quantities with validation, and filter recipes cookable solely from current pantry inventory. |
+| Cooking |Identify recipes whose full ingredient requirements (name, unit, and quantity) are met by current pantry stock. |
+| Nutrition | Calculate total and per-portion kcal from the predefined ingredient dataset with warnings for unknown ingredients or non-gram units. |
+| Dietary information | Classify recipes as Vegan, Vegetarian, or Neither based on the predefined dataset. |
+| Data storage | Save and load shopping lists, and pantry data across sessions |
 
 ## User Stories and Acceptance Criteria
 
