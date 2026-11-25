@@ -186,13 +186,13 @@ As a user, I want to see how many calories are in a dish so that I know how much
 **Responsible:** All team members — shared responsibility
 
 **User story:**  
-As a user, I want my recipes, shopping lists, and pantry inventory to be saved to and loaded from a file so that my data remains available when I restart the application.
+As a user, I want all recipes, shopping lists, and pantry inventory to be persisted to structured files and restored upon loading, so that no data is lost between sessions.
 
 **Acceptance criteria:**
 
-- All application data is saved correctly.
-- Loading restores the data fully.
-- Corrupted files trigger an error message.
+- Saving writes all recipes, shopping lists, and pantry items to disk and displays a confirmation message.
+- Loading a valid data file restores recipes, shopping lists, and pantry items completely.
+- Missing or corrupted/malformed files display a clear error message, keep existing inmemory data intact, and never raise a Python traceback.
 
 ### US12 — Determine Vegetarian or Vegan Status
 
@@ -235,23 +235,23 @@ As a user, I want to find recipes I can cook using my pantry stock so that I can
 
 | Ingredient | kcal per 100 g | Vegan | Vegetarian |
 | --- | ---: | :---: | :---: |
-| Sugar | 400 | Yes | Yes |
-| Milk | 60 | No | Yes |
-| Egg | 155 | No | Yes |
-| Butter | 720 | No | Yes |
-| Tomato | 18 | Yes | Yes |
+| Sugar (Default unit: g) | 400 | Yes | Yes |
+| Milk (Default unit: g) | 60 | No | Yes |
+| Egg (Default unit: g) | 155 | No | Yes |
+| Butter (Default unit: g) | 720 | No | Yes |
+| Tomato (Default unit: g) | 18 | Yes | Yes |
 
 ## Unit and Scaling Rules
 
 ### Units
 
-- Units are **not automatically converted**, for example, from `g` to `kg`.
-- Ingredients must have the **same unit** to be combined.
+- Units are never converted automatically (e.g., g stays g, kg stays kg); merging, comparison, and deduction require matching ingredient name and unit.
+- Entries with different units (such as g and kg) stay separate and are never summed across incompatible units.
 
 ### Scaling Formula
 
 ```python
-new_quantity = old_quantity * (new_portions / old_portions)
+Scaling Formula: new_quantity = old_quantity * (new_portions / old_portions) with consistent 2-decimal rounding (round(value, 2)) and validation rejecting portions ≤ 0 or non-numeric inputs.
 ```
 
 ## Responsibilities
