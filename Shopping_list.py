@@ -22,6 +22,8 @@ def create_shopping_list(selected_recipes, list_name):
     all_ingredients = []
 
     # Loops through each ingredient in each recipe from the selected recipes
+    # Create a shopping list by combining ingredients from one or more recipes
+    # Merges identical ingredients that share the same unit into one entry
     for recipe in selected_recipes:
         for item in recipe["ingredients"]:
             # Add each ingredient dictionary to the end of 'all_ingredients'
@@ -39,6 +41,7 @@ def create_shopping_list(selected_recipes, list_name):
 
 # Adds a single recipe's ingredients into an already existing shopping list
 def add_recipe_to_shopping_list(shopping_list, recipe):
+    # Add a recipe's ingredients into an existing shopping list and merge duplicates
     # Loop through each ingredient in the recipe and add a copy to the list
     for item in recipe["ingredients"]:
         new_item = make_item(item["name"], item["quantity"], item["unit"])
@@ -59,6 +62,7 @@ def add_recipe_to_shopping_list(shopping_list, recipe):
 def add_shopping_item(shopping_list, name, quantity, unit):
     # Parameter 1 is the shopping list dictionary, followed by name, quantity, and unit
     # Shopping list item must have a quantity > 0 to be valid
+    # Automatically merges with an existing item if name and unit match
     if quantity <= 0:
         return False
 
@@ -80,6 +84,8 @@ def add_shopping_item(shopping_list, name, quantity, unit):
 
 
 # USER STORY 9: Update the quantity of an existing item on the shopping list
+# Update the quantity of an existing shopping list item by index
+# Rejects quantities <= 0 or out-of-range list indices
 def update_shopping_item(shopping_list, index, new_quantity):
     # Makes sure the new quantity is valid (> 0)
     if new_quantity <= 0:
@@ -109,6 +115,9 @@ def remove_shopping_item(shopping_list, index):
 
 
 # USER STORY 9: Delete an entire shopping list
+    # Delete a shopping list from the list of shopping lists by index
+    # Returns False if the index does not exist
+
 def delete_shopping_list(shopping_lists, index):
     # Looks for a valid index of the shopping list to delete
     if index < 0 or index >= len(shopping_lists):
@@ -119,34 +128,3 @@ def delete_shopping_list(shopping_lists, index):
     shopping_lists.remove(list_to_remove)
     return True
 
-
-if __name__ == "__main__":
-    recipe_1 = {
-        "name": "Tomato Soup",
-        "portions": 2,
-        "ingredients": [
-            {"name": "Tomato", "quantity": 300, "unit": "g"},
-            {"name": "Butter", "quantity": 20, "unit": "g"}
-        ]
-    }
-    recipe_2 = {
-        "name": "Tomato Salad",
-        "portions": 2,
-        "ingredients": [
-            {"name": "Tomato", "quantity": 100, "unit": "g"},
-            {"name": "Sugar", "quantity": 10, "unit": "g"}
-        ]
-    }
-    all_lists = []
-    my_list = create_shopping_list([recipe_1, recipe_2], "Weekend Groceries")
-    all_lists.append(my_list)
-    print("1. Created shopping list:", my_list)
-    print("Is 'weekend groceries' taken?", is_shopping_list_name_taken(all_lists, "weekend groceries"))
-    add_shopping_item(my_list, "Egg", 150, "g")
-    print("2. After adding Egg:", my_list)
-    update_shopping_item(my_list, 1, 50)
-    print("3. After updating index 1 (Butter) to 50g:", my_list)
-    remove_shopping_item(my_list, 2)
-    print("4. After removing index 2 (Sugar):", my_list)
-    delete_shopping_list(all_lists, 0)
-    print("5. After deleting shopping list:", all_lists)
