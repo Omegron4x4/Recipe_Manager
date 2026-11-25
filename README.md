@@ -103,7 +103,7 @@ As a user, I want to search for a recipe by name so that I can quickly find the 
 **Responsible:** Sebastian
 
 **User story:**  
-Given a valid recipe selection, when details are viewed, the output shows the recipe name, portion yield, and each ingredient with its required quantity and unit.
+As a user, I want to view a recipe's ingredients, quantities, units, portion yield, and pantry availability status, so that I know which items are already at home and what is missing.
 
 **Acceptance criteria:**
 
