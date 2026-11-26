@@ -5,7 +5,8 @@ from ingredients import INGREDIENTS, combine_items
 
 
 def get_recipe_details(recipe, pantry):
-    """Return recipe ingredients together with how much is available in the pantry."""
+    # Return recipe ingredients together with how much is available in the pantry
+    # Checks each merged ingredient against pantry items with the same name and unit
     details = []
     # Combine duplicate ingredients in the recipe first
     merged_ingredients = combine_items(recipe["ingredients"])
@@ -22,7 +23,7 @@ def get_recipe_details(recipe, pantry):
             "name": item["name"],
             "quantity": item["quantity"],
             "unit": item["unit"],
-            "available": available_qty
+            "available": available_qty,
         }
         details.append(detail_entry)
 
@@ -30,7 +31,8 @@ def get_recipe_details(recipe, pantry):
 
 
 def scale_recipe(recipe, new_portions):
-    """Scale ingredient quantities proportionally to new_portions."""
+    # Scale ingredient quantities proportionally to new_portions
+    # Returns a new scaled recipe dictionary without changing the original recipe
     old_portions = recipe["portions"]
 
     # Prevent division by zero or negative portion counts
@@ -49,7 +51,7 @@ def scale_recipe(recipe, new_portions):
             scaled_entry = {
                 "name": item["name"],
                 "quantity": new_qty,
-                "unit": item["unit"]
+                "unit": item["unit"],
             }
             scaled_items.append(scaled_entry)
 
@@ -57,13 +59,14 @@ def scale_recipe(recipe, new_portions):
     scaled_recipe = {
         "name": recipe["name"],
         "portions": new_portions,
-        "ingredients": scaled_items
+        "ingredients": scaled_items,
     }
     return scaled_recipe
 
 
 def classify_recipe(recipe):
-    """Check if a recipe is Vegan, Vegetarian, or Neither."""
+    # Check if a recipe is Vegan, Vegetarian, or Neither
+    # Looks up every ingredient in the predefined INGREDIENTS dataset
     is_vegan = True
     is_vegetarian = True
 
@@ -95,8 +98,8 @@ if __name__ == "__main__":
         "portions": 2,
         "ingredients": [
             {"name": "Tomato", "quantity": 300, "unit": "g"},
-            {"name": "Butter", "quantity": 25, "unit": "g"}
-        ]
+            {"name": "Butter", "quantity": 25, "unit": "g"},
+        ],
     }
     sample_pantry = [{"name": "Tomato", "quantity": 150, "unit": "g"}]
 
