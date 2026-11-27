@@ -99,10 +99,9 @@ def get_default_recipes():
              {"name": "Rapeseed oil", "quantity": 20, "unit": "ml"},
              {"name": "Vinegar", "quantity": 15, "unit": "ml"},],}]
 
-          
-            
 
-# USER Story 1
+# Userstory 1
+# Validate and add a new recipe dictionary to the recipes list
 def add_recipe(recipes, name, portions, ingredient_list):
   #Validate and add a new recipe dictionary to the recipe dictionary to the recipes list.#
   cleaned_name = name.strip()
@@ -114,10 +113,15 @@ def add_recipe(recipes, name, portions, ingredient_list):
     if len(ingredients_list) == 0:
     return None
     
-  recipe = {"name": cleaned_name,"portions": portions,"ingredients": ingredient_list}
+  recipe = {
+    "name": cleaned_name,
+    "portions": portions,
+    "ingredients": ingredient_list}
+  
   recipes.append(recipe)
   return recipe
-  
+
+#Userstory 2  
 def list_recipes(recipes):
   #Return a shallow copy of the saved recipes list
   #Prevents callers from accidentally modifying the original list structure
@@ -129,5 +133,15 @@ def list_recipes(recipes):
 def search_recipes(recipes, query):
   #Return recipes whose name contains the search query (case-insensitive)
   #Return an empty list if the search text is blank.
-  cleaned_query = receipes.strip().lower()
-  for recipe["name"] in cleaned_query()
+  cleaned_query = query.strip().lower()
+  matches = []
+
+if cleaned_query == "":
+  return matches
+
+for recipe in recipes:
+  recipe_name = recipe["name"].lower()
+  if cleaned_query in recipe_name:
+    matches.append(recipe)
+
+return matches
