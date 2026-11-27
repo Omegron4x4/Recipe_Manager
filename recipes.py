@@ -45,6 +45,26 @@ def get_default_recipes():
              {"name": "Apple", "quantity": 150, "unit": "g"},
              {"name": "Hazelnut", "quantity": 30, "unit": "g"},
              {"name": "Honey", "quantity": 20, "unit": "g"},],},
+
+          {"name": "Caprese Salad",
+           "portions": 2,
+           "ingredients": [
+             {"name": "Tomato", "quantity": 300, "unit": "g"},
+             {"name": "Mozzarella", "quantity": 200, "unit": "g"},
+             {"name": "Olive oil", "quantity": 20, "unit": "ml"},
+             {"name": "Balsamic vinegar", "quantity": 15, "unit": "ml"}
+             {"name": "Basil", "quantity": 10, "unit": "g"},],},
+
+          {"name": "Mushroom Risotto",
+           "portions": 2,
+           "ingredients": [
+             {"name": "Risotto rice", "quantity": 180, "unit": "g"},
+             {"name": "Mushroom", "quantity": 200, "unit": "g"},
+             {"name": "Onion", "quantity": 60, "unit": "g"},
+             {"name": "Butter", "quantity": 30, "unit": "g"},
+             {"name": "Parmesan", "quantity": 50, "unit": "g"},
+             {"name": "Vegetable broth", "quantity": 500, "unit": "ml"}],},
+
             
 
 # USER Story 1
