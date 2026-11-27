@@ -65,6 +65,27 @@ def get_default_recipes():
              {"name": "Parmesan", "quantity": 50, "unit": "g"},
              {"name": "Vegetable broth", "quantity": 500, "unit": "ml"}],},
 
+          {"name": "Zurich-Style Veal in Cream Sauce",
+           "portions": 2,
+           "ingredients": [
+             {"name": "Veal", "quantity": 300, "unit": "g"},
+             {"name": "Mushroom", "quantity": 150, "unit": "g"},
+             {"name": "Onion", "quantity": 60, "unit": "g"},
+             {"name": "Cream", "quantity": 200, "unit": "ml"},
+             {"name": "White wine", "quantity": 100, "unit": "ml"},
+             {"name": "Butter", "quantity": 20, "unit": "g"}],},
+
+          {"name": "Spaghetti Bolognese",
+           "portions": 4,
+           "ingredients": [
+             {"name": "Spaghetti", " quantity": 400, "unit": "g"},
+             {"name": "Minced beef", "quantity": 400, "unit": "g"},
+             {"name": "Tomato sauce", "quantity": 400, "unit": "ml"},
+             {"name": "Onion", "quantity": 100, "unit": "g"},
+             {"name": "Carrot", "quantity": 100, "unit": "g"},
+             {"name": "Olive oil", "quantity": 20, "unit": "ml"}],},
+
+          
             
 
 # USER Story 1
