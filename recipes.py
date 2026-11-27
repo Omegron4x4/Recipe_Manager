@@ -10,12 +10,32 @@ def get_default_recipes():
          
           {"name": "Tomato Basil Pasta",
            "portions": 2,
-           "ingredients":[
+           "ingredients": [
              {"name": "Spaghetti", "quantity": 200, "unit": "g"},
              {"name": "Tomato sauce", "quantity": 250, "unit": "ml"},
              {"name": "Olive oil", "quantity": 20, "unit": "ml"},
              {"name": "Garlic", "quantity": 10, "unit": "g"},
-             {"name": "Basil", "quantity": 10, "unit": "g"},],},            
+             {"name": "Basil", "quantity": 10, "unit": "g"},],}, 
+          
+          {"name": "Lentil Vegetable Soup",
+           "portions": 4,
+           "ingredients": [
+             {"name": "Lentils", "quantity": 200, "unit": "g"},
+             {"name": "Carrot", "quantity": 150, "unit": "g"},
+             {"name": "Potato", "quantity": 200, "unit": "g"},
+             {"name": "Leek", "quantity": 100, "unit": "g"},
+             {"name": "Vegetable broth", "quantity": 800, "unit": "ml"},
+             {"name": "Olive oil", "quantity": 15, "unit": "ml"},],},
+
+          {"name": "Swiss Cheese Fondue",
+           "portions": 2,
+           "ingredients": [
+             {"name": "Gruyere", "quantity": 200, "unit": "g"},
+             {"name": "Emmental", "quantity": 200, "unit": "g"},
+             {"name": "White wine", "quantity": 150, "unit": "ml"},
+             {"name": "Bread", "quantity": 300, "unit": "g"},
+             {"name": "Garlic", "quantity": 5, "unit": "g"},],},
+            
 
 # USER Story 1
 def add_recipe(recipes, name, portions, ingredient_list):
