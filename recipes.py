@@ -1,6 +1,8 @@
 #Default recipes
 def get_default_recipes():
-  return [{"name": "Classic Swiss Roesti",
+  return [
+    #Vegan Recipes (3)
+          {"name": "Classic Swiss Roesti",
            "portions": 2,
            "ingredients": [
              {"name": "Potato", "quantity": 500, "unit":"g"},
@@ -27,6 +29,7 @@ def get_default_recipes():
              {"name": "Vegetable broth", "quantity": 800, "unit": "ml"},
              {"name": "Olive oil", "quantity": 15, "unit": "ml"},],},
 
+    #Vegetarian Recipes (4)
           {"name": "Swiss Cheese Fondue",
            "portions": 2,
            "ingredients": [
@@ -65,6 +68,7 @@ def get_default_recipes():
              {"name": "Parmesan", "quantity": 50, "unit": "g"},
              {"name": "Vegetable broth", "quantity": 500, "unit": "ml"},],},
 
+    #Meat Recipes (3)
           {"name": "Zurich-Style Veal in Cream Sauce",
            "portions": 2,
            "ingredients": [
