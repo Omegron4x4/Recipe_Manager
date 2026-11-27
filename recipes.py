@@ -1,3 +1,8 @@
+#Default recipes
+def get_default_recipes():
+  return [{"name": "Classic Swiss Roesti", "portions": 2, "ingredients": [{"name": "Potato", "quantity": 500, "unit":"g"},{"name": "Rapeseed oil", "quantity": 30, "unit": "ml"}, {"name": "Onion", "quantity": 80, "unit": "g"}, {"name": "Salt", "quantity": 5, "unit": "g"},],}
+
+# USER Story 1
 def add_recipe(recipes, name, portions, ingredient_list):
   #Validate and add a new recipe dictionary to the recipe dictionary to the recipes list.#
   cleaned_name = name.strip()
