@@ -1,6 +1,21 @@
 #Default recipes
 def get_default_recipes():
-  return [{"name": "Classic Swiss Roesti", "portions": 2, "ingredients": [{"name": "Potato", "quantity": 500, "unit":"g"},{"name": "Rapeseed oil", "quantity": 30, "unit": "ml"}, {"name": "Onion", "quantity": 80, "unit": "g"}, {"name": "Salt", "quantity": 5, "unit": "g"},],}
+  return [{"name": "Classic Swiss Roesti",
+           "portions": 2,
+           "ingredients": [
+             {"name": "Potato", "quantity": 500, "unit":"g"},
+             {"name": "Rapeseed oil", "quantity": 30, "unit": "ml"},
+             {"name": "Onion", "quantity": 80, "unit": "g"},
+             {"name": "Salt", "quantity": 5, "unit": "g"},],},
+         
+          {"name": "Tomato Basil Pasta",
+           "portions": 2,
+           "ingredients":[
+             {"name": "Spaghetti", "quantity": 200, "unit": "g"},
+             {"name": "Tomato sauce", "quantity": 250, "unit": "ml"},
+             {"name": "Olive oil", "quantity": 20, "unit": "ml"},
+             {"name": "Garlic", "quantity": 10, "unit": "g"},
+             {"name": "Basil", "quantity": 10, "unit": "g"},],},            
 
 # USER Story 1
 def add_recipe(recipes, name, portions, ingredient_list):
