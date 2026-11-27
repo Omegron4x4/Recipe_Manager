@@ -35,6 +35,16 @@ def get_default_recipes():
              {"name": "White wine", "quantity": 150, "unit": "ml"},
              {"name": "Bread", "quantity": 300, "unit": "g"},
              {"name": "Garlic", "quantity": 5, "unit": "g"},],},
+
+          {"name": "Bircher Muesli",
+           "portions": 2,
+           "ingredients": [
+             {"name": "Oats", "quantity": 100, "unit": "g"},
+             {"name": "Milk", "quantity": 200, "unit": "ml"},
+             {"name": "Yogurt", "quantity": 150, "unit": "g"},
+             {"name": "Apple", "quantity": 150, "unit": "g"},
+             {"name": "Hazelnut", "quantity": 30, "unit": "g"},
+             {"name": "Honey", "quantity": 20, "unit": "g"},],},
             
 
 # USER Story 1
