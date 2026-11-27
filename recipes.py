@@ -63,7 +63,7 @@ def get_default_recipes():
              {"name": "Onion", "quantity": 60, "unit": "g"},
              {"name": "Butter", "quantity": 30, "unit": "g"},
              {"name": "Parmesan", "quantity": 50, "unit": "g"},
-             {"name": "Vegetable broth", "quantity": 500, "unit": "ml"}],},
+             {"name": "Vegetable broth", "quantity": 500, "unit": "ml"},],},
 
           {"name": "Zurich-Style Veal in Cream Sauce",
            "portions": 2,
@@ -73,7 +73,7 @@ def get_default_recipes():
              {"name": "Onion", "quantity": 60, "unit": "g"},
              {"name": "Cream", "quantity": 200, "unit": "ml"},
              {"name": "White wine", "quantity": 100, "unit": "ml"},
-             {"name": "Butter", "quantity": 20, "unit": "g"}],},
+             {"name": "Butter", "quantity": 20, "unit": "g"},],},
 
           {"name": "Spaghetti Bolognese",
            "portions": 4,
@@ -83,7 +83,17 @@ def get_default_recipes():
              {"name": "Tomato sauce", "quantity": 400, "unit": "ml"},
              {"name": "Onion", "quantity": 100, "unit": "g"},
              {"name": "Carrot", "quantity": 100, "unit": "g"},
-             {"name": "Olive oil", "quantity": 20, "unit": "ml"}],},
+             {"name": "Olive oil", "quantity": 20, "unit": "ml"},],},
+
+          {"name": "Cervelat Cheese Salad",
+           "portions": 2,
+           "ingredients": [
+             {"name": "Cervelat", "quantity": 200, "unit": "g"},
+             {"name": "Emmental", "quantity": 100, "unit": "g"},
+             {"name": "Onion", "quantity": 50, "unit": "g"},
+             {"name": "Cucumber", "quantity": 100, "unit": "g"},
+             {"name": "Rapeseed oil", "quantity": 20, "unit": "ml"},
+             {"name": "Vinegar", "quantity": 15, "unit": "ml"},],}]
 
           
             
