@@ -141,3 +141,28 @@ def combine_items(ingredient_list):
         
     return combined_list
 #the combined list is now being cycled through again untill all ingredients have been added to "combined list"
+
+def is_valid_ingredient(name):
+    # Return True if the ingredient name is in the predefined dataset
+    # Checks that name is a string before cleaning and capitalizing it
+    if type(name) != str:
+        return False
+    return name.strip().capitalize() in INGREDIENTS
+
+
+def is_valid_unit(unit):
+    # Return True if the unit is allowed
+    # Normalizes whitespace and lowercase before checking against UNITS
+    if type(unit) != str:
+        return False
+    return unit.strip().lower() in UNITS
+
+
+def make_item(name, quantity, unit):
+    # Create a standardized ingredient or pantry item dictionary
+    # Keeps all item dictionaries in the exact same key format
+    return {
+        "name": name.strip().capitalize(),
+        "quantity": quantity,
+        "unit": unit.strip().lower(),
+    }
