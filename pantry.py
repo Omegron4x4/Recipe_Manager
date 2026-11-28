@@ -1,6 +1,7 @@
 # pantry.py
 # Responsible: Kenan (US7, US13, US14)
 
+
 from ingredients import combine_items, make_item
 from recipe_details import scale_recipe
 
@@ -109,3 +110,25 @@ if __name__ == "__main__":
     }]
     print("Cookable for 3 portions:", find_cookable_recipes(sample_recipes, test_pantry, 3))
     print("Cookable for 4 portions:", find_cookable_recipes(sample_recipes, test_pantry, 4))
+
+#added by Niels - get_default_pantry - naming for the storage file
+
+def get_default_pantry():
+    # add enough ingredients to cook 2 portions Rosti and Cheese Fondue for program testing
+    #create an empty list
+    default_pantry = []
+
+    # Rosti 2 portions
+    add_pantry_item(default_pantry, "Potato", 500, "g")
+    add_pantry_item(default_pantry, "Rapeseed oil", 30, "ml")
+    add_pantry_item(default_pantry, "Onion", 80, "g")
+    add_pantry_item(default_pantry, "Salt", 5, "g")
+
+    # Fondue (2 portions)
+    add_pantry_item(default_pantry, "Gruyere", 200, "g")
+    add_pantry_item(default_pantry, "Emmental", 200, "g")
+    add_pantry_item(default_pantry, "White wine", 150, "ml")
+    add_pantry_item(default_pantry, "Bread", 300, "g")
+    add_pantry_item(default_pantry, "Garlic", 5, "g")
+
+    return default_pantry
